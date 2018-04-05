@@ -54,29 +54,6 @@
 	<div id="footerContent">
 		<div id="contact">
 				<p>Contact us:</p>
-				<?php
-				/*if($_POST['formSubmit'] == "Submit")
-				{
-					if(!empty($_POST['formEmail']))
-					{
-						if (!filter_var($_POST['formEmail'], FILTER_VALIDATE_EMAIL) == false)
-						{
-							echo("is a valid email address");
-						} else
-						{
-							echo '<script type="text/javascript">';
-							echo 'alert("' . $_POST['formEmail'] . ' is an invalid email.")';
-							echo '</script>';
-						}
-					}
-				}*/
-				if(!empty($errorMessage)) 
-				{
-					echo '<script type="text/javascript">';
-					echo 'alert("There was an error with your form: \n ' . $errorMessage1 . ' \n ' . $errorMessage2 . ' \n ' . $errorMessage3 . '")';
-					echo '</script>';
-				}
-				?>
 				<form action="m.index.php" method="post">
 				<input name="formName" placeholder="Name" type="text" class="form" value="<?=$varName;?>" />
 				<input name="formEmail" placeholder="Email@example.com" type="text" class="form" value="<?=$varEmail;?>" />
