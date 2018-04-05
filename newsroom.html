@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WYPR | Newsroom</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/searchbox.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: 0<!--target.offset(5).top -->
+        }, 500);
+        return true;
+      }
+    }
+  });
+});
+</script>
+</head>
+<body>
+<div id="header">
+  <div id="headerContent">
+        <div id="idlogo"><a href="index.php"><img src="images/881_logo.png" width="227" height="131" alt="WYPR 88.1 Logo"></a></div>
+        <div id="headerFuncs">
+            <div>
+				<a href="m.index.php"><img src="images/wypr_logo.png" width="206" height="46" alt="WYPR Logo"></a>
+            	<a href="#" target="_blank"><img src="images/playbutton.png" width="180" height="46" alt="Play Button"></a>
+            </div>
+            <div>
+                <div id="donate"><a href="support.php">Donate</a></div>
+                <div class="search">
+				<form method="get" id="searchform" id="searchbox_007471823761899649843:fvdkcfpamsm" action="search-result.php">
+				<div>
+				<input value="007471823761899649843:fvdkcfpamsm" name="cx" type="hidden" />
+				<input value="FORID:11" name="cof" type="hidden" />
+				<input type="text" value="" name="s" id="s" onfocus="defaultInput(this)" placeholder="Search..." onblur="clearInput(this)" />
+				<input type="submit" id="searchsubmit" value=" " />
+				</div>
+				</form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="nav">
+  <ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="programs.php">Programs</a></li>
+	<li><a href="newsroom.php" class="current">Newsroom</a></li>
+	<li><a href="events.php">Events</a></li>
+	<li><a href="support.php">Support</a></li>
+	<li><a href="about.php">About</a></li>
+    </ul>
+</div>
+
+<div id="bodyContent">
+	<div id="wideWrapper">
+    	<h1>Newsroom</h1>
+        		<div class="newsroom item news">
+					<h3>Vestibulum eleifend imperdiet mi, ac tempor metus convallis at.</h3><br>
+					<div><img src="images/mff.jpg" width="130" height="130" alt="School Bus"></div>
+					<p>Aliquam semper erat nec massa sollicitudin, sit amet tincidunt urna sodales. Maecenas viverra sit amet nunc tempus scelerisque. Mauris dictum pharetra erat sed facilisis. Sed venenatis suscipit tincidunt. Sed rhoncus, dui id porttitor tincidunt, est sem ultrices nibh, sed varius tellus augue consequat odio. Cras purus justo, fringilla a ex at, aliquet tempor mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+				</div>
+                
+                <div class="newsroom item news">
+					<h3>Mauris fermentum leo vel pharetra volutpat!</h3><br>
+					<div><img src="images/washington.jpg" width="130" height="130" alt="School Bus"></div>
+					<p>Sed molestie tellus et mi accumsan, et ullamcorper tellus consequat. Phasellus feugiat ut massa at maximus. Curabitur ut aliquet felis. Nulla luctus eu felis ut gravida. Curabitur vel hendrerit mauris. Morbi eget arcu imperdiet, aliquam magna sit amet, fermentum sapien. Quisque faucibus sed elit ut cursus. Nunc eget sapien sit amet eros lobortis convallis ut et eros. Praesent posuere id velit nec mollis. </p>
+				</div>
+				
+				<div class="newsroom item news">
+					<h3>Donec viverra vulputate egestas.</h3><br>
+					<div><img src="images/ummc.jpg" width="130" height="130" alt="Roady"></div>
+					<p>Sed molestie tellus et mi accumsan, et ullamcorper tellus consequat. Phasellus feugiat ut massa at maximus. Curabitur ut aliquet felis. Nulla luctus eu felis ut gravida. Curabitur vel hendrerit mauris. Morbi eget arcu imperdiet, aliquam magna sit amet, fermentum sapien. Nulla purus metus, maximus at ante ut, feugiat placerat lorem. Quisque sed malesuada mauris. Morbi lacinia nunc non ligula porttitor, at tempor ipsum dignissim. Pellentesque sodales consectetur massa in venenatis. Curabitur elit tortor, gravida sed magna posuere.</p>
+				</div>
+                
+                <div class="newsroom item news last">
+					<h3>Nam convallis finibus quam, ut maximus urna semper ut.</h3><br>
+					<div><img src="images/glare.jpg" width="130" height="130" alt="School Bus"></div>
+					<p> Cras purus justo, fringilla a ex at, aliquet tempor mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum erat leo, eu volutpat lacus consequat et. In placerat ligula vel mi molestie scelerisque. Proin eu consequat augue. Sed nec aliquam ante, vitae tempus libero. Aliquam varius sem sit amet lorem pretium, nec lobortis est cursus. Nunc non risus leo. Suspendisse dapibus sapien non augue accumsan condimentum.</p>
+                </div>
+	</div>
+	
+</div>
+
+<div id="footer">
+	<div id="footerContent">
+		<div id="mission">
+			<p>Serving the metropolitan Baltimore area and the state of Maryland, the mission of Your Public Radio is to broadcast programs of intellectual integrity and cultural merit which enrich the minds and spirits of our listeners and ultimately strengthen the communities we serve.<br><br><a style="text-decoration:none; color:#FFF" href="wypr-newsletter.html" target="_blank">© 2016 WYPR</a></p>
+		</div>
+		<div id="contact">
+			<div id="social">
+				<div id="fb"><a target="_blank" href="https://www.facebook.com/WYPR881Baltimore"></a></div>
+				<div id="tw"><a target="_blank" href="https://twitter.com/WYPR881FM"></a></div>
+				<div id="igm"><a target="_blank" href="https://www.instagram.com/explore/locations/27732854/"></a></div>
+			</div>
+			<div id="formArea">
+				<p>Contact us:</p>
+				<?php
+				/*if($_POST['formSubmit'] == "Submit")
+				{
+					if(!empty($_POST['formEmail']))
+					{
+						if (!filter_var($_POST['formEmail'], FILTER_VALIDATE_EMAIL) == false)
+						{
+							echo("is a valid email address");
+						} else
+						{
+							echo '<script type="text/javascript">';
+							echo 'alert("' . $_POST['formEmail'] . ' is an invalid email.")';
+							echo '</script>';
+						}
+					}
+				}*/
+				if(!empty($errorMessage)) 
+				{
+					echo '<script type="text/javascript">';
+					echo 'alert("There was an error with your form: \n ' . $errorMessage1 . ' \n ' . $errorMessage2 . ' \n ' . $errorMessage3 . '")';
+					echo '</script>';
+				}
+				?>
+				<form action="index.php" method="post">
+				<input name="formName" placeholder="Name" type="text" class="form" value="<?=$varName;?>">
+				<input name="formEmail" placeholder="Email@example.com" type="text" class="form" value="<?=$varEmail;?>">
+				<textarea name="formComm" placeholder="Comments"><?=$varComm;?></textarea>
+				<input name="formSubmit" type="submit" value="Submit" class="form">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="bstripe orange"></div>
+	<div class="bstripe blue"></div>
+	<div class="bstripe green"></div>
+</div>
+</body>
+</html>

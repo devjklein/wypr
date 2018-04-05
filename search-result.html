@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WYPR | Search Results</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/searchbox.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+<div id="header">
+  <div id="headerContent">
+        <div id="idlogo"><a href="index.php"><img src="images/881_logo.png" width="227" height="131" alt="WYPR 88.1 Logo"></a></div>
+        <div id="headerFuncs">
+            <div>
+				<a href="index.php"><img src="images/wypr_logo.png" width="206" height="46" alt="WYPR Logo"></a>
+            	<a href="#" target="_blank"><img src="images/playbutton.png" width="180" height="46" alt="Play Button"></a>
+            </div>
+            <div>
+                <div id="donate"><a href="support.php">Donate</a></div>
+                <div class="search">
+				<form method="get" id="searchform" id="searchbox_007471823761899649843:fvdkcfpamsm" action="search-result.php">
+				<div>
+				<input value="007471823761899649843:fvdkcfpamsm" name="cx" type="hidden" />
+				<input value="FORID:11" name="cof" type="hidden" />
+				<input type="text" value="" name="s" id="s" onfocus="defaultInput(this)" placeholder="Search..." onblur="clearInput(this)" />
+				<input type="submit" id="searchsubmit" value=" " />
+				</div>
+				</form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="nav">
+  <ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="programs.php">Programs</a></li>
+	<li><a href="newsroom.php">Newsroom</a></li>
+	<li><a href="events.php">Events</a></li>
+	<li><a href="support.php">Support</a></li>
+	<li><a href="about.php">About</a></li>
+    </ul>
+</div>
+
+<div id="bodyContent">
+	<div id="bodyContent" class="result">
+		<div class='post-body entry-content'>
+		<div id="cse" style="width: 100%;">
+		<ul id="loadbar">
+		<li><div class="bar" id="layerFill1"></div></li>
+		<li><div class="bar" id="layerFill2"></div></li>
+		<li><div class="bar" id="layerFill3"></div></li>
+		<li><div class="bar" id="layerFill4"></div></li>
+		<li><div class="bar" id="layerFill5"></div></li>
+		<li><div class="bar" id="layerFill6"></div></li>
+		<li><div class="bar" id="layerFill7"></div></li>
+		<li><div class="bar" id="layerFill8"></div></li>
+		<li><div class="bar" id="layerFill9"></div></li>
+		<li><div class="bar" id="layerFill10"></div></li>
+		</ul>
+		</div>
+		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+		<script type="text/javascript">
+		google.load('search', '1', {language : 'en', style : google.loader.themes.MINIMALIST});
+		google.setOnLoadCallback(function() {
+		var customSearchOptions = {};
+		var orderByOptions = {};
+		orderByOptions['keys'] = [{label: 'Relevance', key: ''},{label: 'Date', key: 'date'}];
+		customSearchOptions['enableOrderBy'] = true;
+		customSearchOptions['orderByOptions'] = orderByOptions;
+		var imageSearchOptions = {};
+		imageSearchOptions['layout'] = google.search.ImageSearch.LAYOUT_COLUMN;
+		customSearchOptions['enableImageSearch'] = true;
+		customSearchOptions['imageSearchOptions'] = imageSearchOptions;
+		var googleAnalyticsOptions = {};
+		googleAnalyticsOptions['queryParameter'] = 's';
+		googleAnalyticsOptions['categoryParameter'] = '';
+		customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions; var customSearchControl = new google.search.CustomSearchControl(
+		'007471823761899649843:fvdkcfpamsm', customSearchOptions);
+		customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+		var options = new google.search.DrawOptions();
+		options.setAutoComplete(true);
+		options.enableSearchResultsOnly();
+		customSearchControl.draw('cse', options);
+		function parseParamsFromUrl() {
+		var params = {};
+		var parts = window.location.search.substr(1).split('\x26');
+		for (var i = 0; i < parts.length; i++) {
+		var keyValuePair = parts[i].split('=');
+		var key = decodeURIComponent(keyValuePair[0]);
+		params[key] = keyValuePair[1] ?
+		decodeURIComponent(keyValuePair[1].replace(/\+/g, ' ')) :
+		keyValuePair[1];
+		}
+		return params;
+		}
+		var urlParams = parseParamsFromUrl();
+		var queryParamName = "s";
+		if (urlParams[queryParamName]) {
+		customSearchControl.execute(urlParams[queryParamName]);
+		}
+		}, true);
+		</script>
+		<div style='clear: both;'></div>
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	<div id="footerContent">
+		<div id="mission">
+			<p>Serving the metropolitan Baltimore area and the state of Maryland, the mission of Your Public Radio is to broadcast programs of intellectual integrity and cultural merit which enrich the minds and spirits of our listeners and ultimately strengthen the communities we serve.<br><br><a style="text-decoration:none; color:#FFF" href="wypr-newsletter.html" target="_blank">© 2016 WYPR</a></p>
+		</div>
+		<div id="contact">
+			<div id="social">
+				<div id="fb"><a target="_blank" href="https://www.facebook.com/WYPR881Baltimore"></a></div>
+				<div id="tw"><a target="_blank" href="https://twitter.com/WYPR881FM"></a></div>
+				<div id="igm"><a target="_blank" href="https://www.instagram.com/explore/locations/27732854/"></a></div>
+			</div>
+			<div id="formArea">
+				<p>Contact us:</p>
+				<?php
+				/*if($_POST['formSubmit'] == "Submit")
+				{
+					if(!empty($_POST['formEmail']))
+					{
+						if (!filter_var($_POST['formEmail'], FILTER_VALIDATE_EMAIL) == false)
+						{
+							echo("is a valid email address");
+						} else
+						{
+							echo '<script type="text/javascript">';
+							echo 'alert("' . $_POST['formEmail'] . ' is an invalid email.")';
+							echo '</script>';
+						}
+					}
+				}*/
+				if(!empty($errorMessage)) 
+				{
+					echo '<script type="text/javascript">';
+					echo 'alert("There was an error with your form: \n ' . $errorMessage1 . ' \n ' . $errorMessage2 . ' \n ' . $errorMessage3 . '")';
+					echo '</script>';
+				}
+				?>
+				<form action="index.php" method="post">
+				<input name="formName" placeholder="Name" type="text" class="form" value="<?=$varName;?>">
+				<input name="formEmail" placeholder="Email@example.com" type="text" class="form" value="<?=$varEmail;?>">
+				<textarea name="formComm" placeholder="Comments"><?=$varComm;?></textarea>
+				<input name="formSubmit" type="submit" value="Submit" class="form">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="bstripe orange"></div>
+	<div class="bstripe blue"></div>
+	<div class="bstripe green"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WYPR | About Us</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/searchbox.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: 0<!--target.offset(5).top -->
+        }, 500);
+        return true;
+      }
+    }
+  });
+});
+</script>
+</head>
+<body>
+<div id="header">
+  <div id="headerContent">
+        <div id="idlogo"><a href="index.php"><img src="images/881_logo.png" width="227" height="131" alt="WYPR 88.1 Logo"></a></div>
+        <div id="headerFuncs">
+            <div>
+				<a href="m.index.php"><img src="images/wypr_logo.png" width="206" height="46" alt="WYPR Logo"></a>
+            	<a href="#" target="_blank"><img src="images/playbutton.png" width="180" height="46" alt="Play Button"></a>
+            </div>
+            <div>
+                <div id="donate"><a href="support.php">Donate</a></div>
+                <div class="search">
+				<form method="get" id="searchform" id="searchbox_007471823761899649843:fvdkcfpamsm" action="search-result.php">
+				<div>
+				<input value="007471823761899649843:fvdkcfpamsm" name="cx" type="hidden" />
+				<input value="FORID:11" name="cof" type="hidden" />
+				<input type="text" value="" name="s" id="s" onfocus="defaultInput(this)" placeholder="Search..." onblur="clearInput(this)" />
+				<input type="submit" id="searchsubmit" value=" " />
+				</div>
+				</form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="nav">
+  <ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="programs.php">Programs</a></li>
+	<li><a href="newsroom.php">Newsroom</a></li>
+	<li><a href="events.php">Events</a></li>
+	<li><a href="support.php">Support</a></li>
+	<li><a href="about.php" class="current">About</a></li>
+    </ul>
+</div>
+
+<div id="bodyContent">
+	<div id="wideWrapper" class="newsroom item news last">
+      <h1>About WYPR</h1>
+        <img src="images/wypr-Panorama.jpg" width="640" height="231" alt=""/>
+        <br><br>
+		<h3>Mission statement</h3>
+        <br>
+        <p>Serving the metropolitan Baltimore area and the state of Maryland, the mission of Your Public Radio is to broadcast programs of intellectual integrity and cultural merit which enrich the minds and spirits of our listeners and ultimately strengthen the communities we serve.</p>
+        <br>
+        <h3>WYPR's principles and values include:</h3>
+        <br>
+      <ol>
+            <li>WYPR will remain fundamentally noncommercial in spirit and practice</li>
+            <li>WYPR will adhere to the highest standards of journalistic and artistic excellence</li>
+            <li>WYPR will deliver educational, informational, cultural, and entertainment programming as a public service to the broadest possible audiences</li>
+            <li>WYPR will operate under sound principles of fiscal planning, management and governance</li>
+            <li>WYPR will foster a positive working environment characterized by fairness, equality of opportunity.</li>
+        </ol>
+	</div>
+	
+</div>
+
+<div id="footer">
+	<div id="footerContent">
+		<div id="mission">
+			<p>Serving the metropolitan Baltimore area and the state of Maryland, the mission of Your Public Radio is to broadcast programs of intellectual integrity and cultural merit which enrich the minds and spirits of our listeners and ultimately strengthen the communities we serve.<br><br><a style="text-decoration:none; color:#FFF" href="wypr-newsletter.html" target="_blank">© 2016 WYPR</a></p>
+		</div>
+		<div id="contact">
+			<div id="social">
+				<div id="fb"><a target="_blank" href="https://www.facebook.com/WYPR881Baltimore"></a></div>
+				<div id="tw"><a target="_blank" href="https://twitter.com/WYPR881FM"></a></div>
+				<div id="igm"><a target="_blank" href="https://www.instagram.com/explore/locations/27732854/"></a></div>
+			</div>
+			<div id="formArea">
+				<p>Contact us:</p>
+				<?php
+				/*if($_POST['formSubmit'] == "Submit")
+				{
+					if(!empty($_POST['formEmail']))
+					{
+						if (!filter_var($_POST['formEmail'], FILTER_VALIDATE_EMAIL) == false)
+						{
+							echo("is a valid email address");
+						} else
+						{
+							echo '<script type="text/javascript">';
+							echo 'alert("' . $_POST['formEmail'] . ' is an invalid email.")';
+							echo '</script>';
+						}
+					}
+				}*/
+				if(!empty($errorMessage)) 
+				{
+					echo '<script type="text/javascript">';
+					echo 'alert("There was an error with your form: \n ' . $errorMessage1 . ' \n ' . $errorMessage2 . ' \n ' . $errorMessage3 . '")';
+					echo '</script>';
+				}
+				?>
+				<form action="index.php" method="post">
+				<input name="formName" placeholder="Name" type="text" class="form" value="<?=$varName;?>">
+				<input name="formEmail" placeholder="Email@example.com" type="text" class="form" value="<?=$varEmail;?>">
+				<textarea name="formComm" placeholder="Comments"><?=$varComm;?></textarea>
+				<input name="formSubmit" type="submit" value="Submit" class="form">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="bstripe orange"></div>
+	<div class="bstripe blue"></div>
+	<div class="bstripe green"></div>
+</div>
+</body>
+</html>

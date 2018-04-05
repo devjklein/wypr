@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WYPR | Your NPR News Station</title>
+<link href="css/searchbox.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link href="css/mstyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="header">
+  <div id="logo"><a href="index.php"><img src="m-images/881_logo_full_mini.png" width="1z33" height="99" alt=""/></a></div>
+  <div id="hamburger"><a href="#menu"></a></div>
+</div>
+
+<div id="menu">
+	<ul>
+		<li><a href="m.index.php">Home</a></li>
+		<li><a href="m.programs.php">Programs</a></li>
+		<li><a href="m.newsroom.php">Newsroom</a></li>
+		<li><a href="m.events.php" class="current">Events</a></li>
+		<li><a href="m.support.php">Support</a></li>
+		<li><a href="m.about.php">About</a></li>
+		<li><a href="#">Close Menu</a></li>
+	</ul>
+</div>
+
+
+<div id="nav">
+	<div id="listenlive"><a href="#"><img src="m-images/playbutton_mini.png" width="26" height="26" /> Listen Live</a></div>
+	<div id="donate"><a href="m.support.php">Donate</a></div>
+</div>
+
+<div id="bodyContent">
+	<div id="wrapper">
+    	<h1>Events Calendar</h1>
+		<ul id="eventsList">
+			<li class="month">May</li>
+			<li class="eventMobile">Thur, May 5: <em>Lorem ipsum dolor sit amet</em></li>
+			<li class="eventMobile">May 20-21: <em>Donec fermentum urna ut mi</em></li>
+			<li class="eventMobile">Sun, May 29: <em>Fusce a turpis non ipsum</em></li>
+			<li class="month">June</li>
+			<li class="eventMobile">Sat, June 4: <em>Viverra pretium</em></li>
+			<li class="eventMobile">Sat, June 11: <em>Eget cursus tortor</em></li>
+			<li class="eventMobile">Mon, July 4: <em>Suspendisse convallis</em></li>
+			<li class="month">July</li>
+			<li class="eventMobile">August 7-13: <em>Curabitur vitae consequat</em></li>
+        </ul>
+	</div>
+</div>
+
+<div id="footer">
+	<div id="footerContent">
+		<div id="contact">
+				<p>Contact us:</p>
+				<?php
+				/*if($_POST['formSubmit'] == "Submit")
+				{
+					if(!empty($_POST['formEmail']))
+					{
+						if (!filter_var($_POST['formEmail'], FILTER_VALIDATE_EMAIL) == false)
+						{
+							echo("is a valid email address");
+						} else
+						{
+							echo '<script type="text/javascript">';
+							echo 'alert("' . $_POST['formEmail'] . ' is an invalid email.")';
+							echo '</script>';
+						}
+					}
+				}*/
+				if(!empty($errorMessage)) 
+				{
+					echo '<script type="text/javascript">';
+					echo 'alert("There was an error with your form: \n ' . $errorMessage1 . ' \n ' . $errorMessage2 . ' \n ' . $errorMessage3 . '")';
+					echo '</script>';
+				}
+				?>
+				<form action="m.index.php" method="post">
+				<input name="formName" placeholder="Name" type="text" class="form" value="<?=$varName;?>" />
+				<input name="formEmail" placeholder="Email@example.com" type="text" class="form" value="<?=$varEmail;?>" />
+				<textarea name="formComm" placeholder="Comments"><?=$varComm;?></textarea>
+				<input name="formSubmit" type="submit" value="Submit" class="form" />
+				</form>
+			</div>
+			
+			<div id="social">
+				<div id="fb"><a target="_blank" href="https://www.facebook.com/WYPR881Baltimore"></a></div>
+				<div id="tw"><a target="_blank" href="https://twitter.com/WYPR881FM"></a></div>
+				<div id="igm"><a target="_blank" href="https://www.instagram.com/explore/locations/27732854/"></a></div>
+			</div>
+			
+			
+		<div id="mission">
+				<p>Serving the metropolitan Baltimore area and the state of Maryland, the mission of Your Public Radio is to broadcast programs of intellectual integrity and cultural merit which enrich the minds and spirits of our listeners and ultimately strengthen the communities we serve.<br /><br />© 2016 WYPR</p>
+		</div>
+	</div>
+	<div class="bstripe orange"></div>
+	<div class="bstripe blue"></div>
+	<div class="bstripe green"></div>
+</div>
+	
+
+</body>
+</html>

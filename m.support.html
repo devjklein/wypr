@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WYPR | Your NPR News Station</title>
+<link href="css/searchbox.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link href="css/mstyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="header">
+  <div id="logo"><a href="index.php"><img src="m-images/881_logo_full_mini.png" width="1z33" height="99" alt=""/></a></div>
+  <div id="hamburger"><a href="#menu"></a></div>
+</div>
+
+<div id="menu">
+	<ul>
+		<li><a href="m.index.php">Home</a></li>
+		<li><a href="m.programs.php">Programs</a></li>
+		<li><a href="m.newsroom.php">Newsroom</a></li>
+		<li><a href="m.events.php">Events</a></li>
+		<li><a href="m.support.php" class="current">Support</a></li>
+		<li><a href="m.about.php">About</a></li>
+		<li><a href="#">Close Menu</a></li>
+	</ul>
+</div>
+
+
+<div id="nav">
+	<div id="listenlive"><a href="#"><img src="m-images/playbutton_mini.png" width="26" height="26" /> Listen Live</a></div>
+	<div id="donate"><a href="m.support.php">Donate</a></div>
+</div>
+
+<div id="bodyContent">
+		<div id="wrapper">
+    	<h1>Support WYPR</h1>
+   	  <div class="newsroom item news pledgeOrange">
+          <h2 id="pledge"><a href="#">Pledge Now</a></h2><br><br>
+          <p>WYPR is made possible by the monetary donations of people like you. To support local news, arts, and culture, consider donating today.</p>
+  <table width="298" border="0" cellspacing="4" cellpadding="0">
+  <tbody>
+    <tr>
+      <td width="320" bgcolor="#ED913E"><a href="#" target="#">$10</a></td>
+	</tr>
+	<tr>
+      <td width="320" bgcolor="#ED913E"><a href="#" target="#">$20</a></td>
+    </tr>
+    <tr>
+      <td bgcolor="#ED913E"><a href="#" target="#">$50</a></td>
+	</tr>
+	<tr>
+      <td bgcolor="#ED913E"><a href="#" target="#">$100</a></td>
+    </tr>
+    <tr>
+      <td bgcolor="#ED913E"><a href="#" target="#">$150</a></td>
+	</tr>
+	<tr>
+      <td bgcolor="#ED913E"><a href="#" target="#">$250</a></td>
+    </tr>
+    <tr>
+      <td bgcolor="#ED913E"><a href="#" target="#">$500</a></td>
+	  
+	</tr>
+	<tr>
+      <td bgcolor="#ED913E"><a href="#" target="#">Custom Amount...</a></td>
+    </tr>
+  </tbody>
+</table>
+
+		</div>
+        
+        <div class="newsroom item news pledgeBlue">
+                <h2><a href="#">WYPR Membership</a></h2>
+                <br><br>
+                <p>Do you love WYPR? Consider purchasing a membership! Memberships are the backbone of our station, and not only does your continuing monthly donation keep WPYPR running smoothly, it allows us to deliver a more streamlined </p>
+                <table width="298" border="0" cellspacing="4" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="320" bgcolor="#ED913E"><a href="#" target="#">$3/mo</a></td>
+					</tr>
+	<tr>
+                      <td width="320" bgcolor="#ED913E"><a href="#" target="#">$5/mo</a></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#ED913E"><a href="#" target="#">$10/mo</a></td>
+					</tr>
+	<tr>
+                      <td bgcolor="#ED913E"><a href="#" target="#">$20/mo</a></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#ED913E"><a href="#" target="#">$30/mo</a></td>
+					</tr>
+	<tr>
+                      <td bgcolor="#ED913E"><a href="#" target="#">$40/mo</a></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#ED913E"><a href="#" target="#">$50/mo</a></td>
+					</tr>
+	<tr>
+                      <td bgcolor="#ED913E"><a href="#" target="#">Custom Amount...</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+		</div>
+        
+        <div class="newsroom item news pledgeGreen last">
+                <h2 id="volunteer"><a href="#">Click here to volunteer!</a></h2>
+                <br><br>
+                <h3>Give back to your community; volunteer with WYPR!</h3>
+                <br>
+                <p>As a nonprofit, WYPR does not employ a large enough staff to continually run many of its ongoing community projects. As a result, WYPR relies on volunteers within the community who generously donate their time and keep our programs up and running.</p>
+		</div>
+</div>
+</div>
+
+<div id="footer">
+	<div id="footerContent">
+		<div id="contact">
+				<p>Contact us:</p>
+				<?php
+				/*if($_POST['formSubmit'] == "Submit")
+				{
+					if(!empty($_POST['formEmail']))
+					{
+						if (!filter_var($_POST['formEmail'], FILTER_VALIDATE_EMAIL) == false)
+						{
+							echo("is a valid email address");
+						} else
+						{
+							echo '<script type="text/javascript">';
+							echo 'alert("' . $_POST['formEmail'] . ' is an invalid email.")';
+							echo '</script>';
+						}
+					}
+				}*/
+				if(!empty($errorMessage)) 
+				{
+					echo '<script type="text/javascript">';
+					echo 'alert("There was an error with your form: \n ' . $errorMessage1 . ' \n ' . $errorMessage2 . ' \n ' . $errorMessage3 . '")';
+					echo '</script>';
+				}
+				?>
+				<form action="m.index.php" method="post">
+				<input name="formName" placeholder="Name" type="text" class="form" value="<?=$varName;?>" />
+				<input name="formEmail" placeholder="Email@example.com" type="text" class="form" value="<?=$varEmail;?>" />
+				<textarea name="formComm" placeholder="Comments"><?=$varComm;?></textarea>
+				<input name="formSubmit" type="submit" value="Submit" class="form" />
+				</form>
+			</div>
+			
+			<div id="social">
+				<div id="fb"><a target="_blank" href="https://www.facebook.com/WYPR881Baltimore"></a></div>
+				<div id="tw"><a target="_blank" href="https://twitter.com/WYPR881FM"></a></div>
+				<div id="igm"><a target="_blank" href="https://www.instagram.com/explore/locations/27732854/"></a></div>
+			</div>
+			
+			
+		<div id="mission">
+				<p>Serving the metropolitan Baltimore area and the state of Maryland, the mission of Your Public Radio is to broadcast programs of intellectual integrity and cultural merit which enrich the minds and spirits of our listeners and ultimately strengthen the communities we serve.<br /><br />© 2016 WYPR</p>
+		</div>
+	</div>
+	<div class="bstripe orange"></div>
+	<div class="bstripe blue"></div>
+	<div class="bstripe green"></div>
+</div>
+	
+
+</body>
+</html>

@@ -1,0 +1,638 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+p {
+	margin: 0;
+	padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #f1f1f1;
+}
+
+/* HEADER */
+#header {
+	background-image: url(../images/Baltimore_Inner_Harbor_Skyline_Night_Panorama.jpg);
+	background-position: center -20px;
+	background-size: 1920px;
+	min-height: 192px;
+	width: 100%;
+	display:flex;
+}
+#headerContent {
+	height: 131px;
+	width: 960px;
+	margin: 31px auto;
+}
+#idlogo {
+	height: 131px;
+	width: 227px;
+	margin: 0 0 0 54px;
+	float:left;
+}
+#headerFuncs {
+	width: 395px;
+	height:104px;
+	float:right;
+	margin: 27px  54px 0 54px;
+}
+#headerFuncs > div:nth-child(1) { /*Header functions top*/
+	height: 46px;
+	width: 100%;
+	margin: 0 0 26px 0;
+}
+#headerFuncs > div:nth-child(1) > a:nth-of-type(1) > img { /*WYPR dot logo*/
+	margin-right: 9px;
+	float:left;
+}
+#headerFuncs > div:nth-child(1) > a {
+	display:block;
+	
+}
+#headerFuncs > div:nth-child(1)  > a:nth-of-type(2) > img { /*Listen live button*/
+}
+
+#headerFuncs > div:nth-child(2) { /*Header functions bottom*/
+	height: 32px;
+	width: 100%;
+}
+#donate {
+	background-color: #6ec8ee;
+	width: 171px;
+	height: 32px;
+	border-radius: 9px;
+	float: left;
+	text-align:center;
+	margin-right: 5px;
+}
+#donate a {
+	font: bold 20px/32px "Lato", Arial, sans-serif;
+	color:white;
+	text-decoration:none;
+	display:block;
+}
+#donate:active {
+	background-color: #ed913e;
+}
+/* END HEADER */
+
+/* NAV */
+#nav {
+	background-color: #ed913e;
+	height: 48px;
+	width: 100%;
+	float: left;
+}
+#nav ul {
+	margin: 0 auto;
+	padding: 0;
+	width: 960px;
+}
+#nav ul li {
+	float: left;
+	width: 160px;
+	display: inline-block;
+	position: relative;
+	text-align:center;
+}
+#nav a {
+	font: normal 20px/48px "Lato", Arial, sans-serif;
+	text-decoration: none;
+	display:block;
+	width: 160px;
+	height:48px;
+}
+#nav a:link {
+	color: #FFF;
+}
+#nav a:visited {
+	color: #FFF;
+}
+#nav a:hover {
+
+}
+#nav a:active {
+	background-color: #639381;
+}
+.current {
+	background-color:#639381;
+}
+/* END NAV */
+
+/* BODY */
+#bodyContent {
+	width: 960px;
+	margin: 0 auto;
+	overflow:hidden;
+	background-color:#FFF
+}
+#bodyContent.index {
+	background-image:url(../images/bg.png);
+	background-repeat:repeat-y;
+}
+#bodyContent.result {
+	background-image:url();
+	background-color:#FFF;
+	padding: 0;
+}
+.post-bodyentry-content {
+	overflow:hidden;
+}
+#contentLeft {
+	float:left;
+	width: 464px;
+	border-right: #a2adb8 0px solid;
+	margin-right:32px;
+	/*box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;*/
+}
+#contentRight {
+	float:left;
+	width: 464px;
+	border-left: #a2adb8 0px solid;
+	/*box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;*/
+}
+.newsHeader {
+	background-color: #a2adb8;
+	height: 48px;
+	width: 100%;
+}
+h1 {
+	font: bold 30px/32px "Lato", Arial, sans-serif;
+	margin:0 0 0 0;
+	padding:0 0 26px 0;
+	color:#333;
+}
+h2 {
+	font: normal 22px/32px "Lato", Arial, sans-serif;
+	margin: 0;
+	padding: 0 0 0 16px;
+	color: #FFF;
+	position: relative;
+	top: 16px;
+	display: block;
+	background-color: #939FAC;
+}
+h3 {
+	font: bold 20px "Lato", Arial, sans-serif;
+	margin: 0;
+	padding: 0 0 6px 0;
+	disply: block;
+	color: #49545F;
+	text-align:left;
+}
+h3:active {
+	cursor: pointer;
+	text-decoration:underline;
+}
+h3:hover {
+	cursor: pointer;
+	text-decoration:underline;
+}
+h4 {
+	font: bold 24px/18px "Lato", Arial, sans-serif;
+	margin:0;
+	padding:0 0 18px 0;
+}
+.item {
+	width: 430px;
+	margin: 0 auto;
+	padding: 16px 0;
+	border-bottom: 1px solid #a2adb8;
+	height: auto;
+}
+.item > p, .item ol {
+	font: normal 16px/22px "Lato", Arial, sans-serif;
+	margin:0;
+}
+.newsroom {
+	padding: 16px 0;
+	width: 640px;
+}
+.program > div {
+	width: 186px;
+	height: 161px;
+	margin-right:6px;
+	overflow:hidden;
+	float:left;
+}
+.news > div {
+	width:130px;
+	height:auto; /* AFFECTS THE TITLE BELOW IT! Temporarily set to 100px was 130px */
+	float:left;
+	overflow:hidden;
+	margin-right:12px;
+}
+.news > div > img{
+}
+.news > p {
+	margin:0;
+	padding:0;
+	position:relative;
+	top: -6px;
+}
+.watch > div {
+	width: 430px;
+	height: 186px;
+}
+.watch > h2 {
+	padding-top:6px;
+}
+.last {
+	border-bottom: 0px;
+}
+.first {
+	padding-top:0;
+}
+.noFlood p {
+	padding:6px 0 0 192px;
+}
+
+/* PROGRAMS SUBPAGE */
+#wideWrapper{
+	width: 640px;
+	margin: 0 auto;
+	padding: 26px 0;
+}
+#wideWrapper a{
+	text-decoration:none;
+	color: white;
+}
+#wrapper {
+	width: 480px;
+	margin: 0 auto;
+	padding: 26px 0;
+}
+.categories {
+	color:#b7b6bb;
+	font: bold 20px/20px "Lato", Arial, sans-serif;
+	margin:0;
+	padding:0 0 13px 0;
+}
+.programItem {
+	max-height: 0;
+	overflow: hidden;
+	width: 100%;
+	border: 0px;
+	box-sizing: border-box;
+	-webkit-transition: all 0.6s ease-in 0s;
+	-moz-transition: all 0.6s ease-in 0s;
+	-ms-transition: all 0.6s ease-in 0s;
+	-o-transition: all 0.6s ease-in 0s;
+	transition: all 0.6s ease-in 0s;
+}
+.programImg {
+	overflow:hidden;
+	height: 184px;
+	width: auto;
+	margin: 0 18px 18px 0;
+	float:left;
+}
+.programItem > p {
+	font: normal 16px/22px "Lato", Arial, sans-serif;
+	margin:0;
+}
+.programList {
+	height: auto;
+	padding: 16px 0 0 0;
+	width:100%;
+}
+.programList table,.programList  tbody,.programList  tr,.programList  td,.programList  a {
+	display:block;
+	margin:0;
+	padding:0;
+}
+.programList tr {
+	margin-bottom:1px;
+}
+.programList tr:last-of-type {
+	margin-bottom:0px;
+}
+.programList table td a{
+	text-decoration:none;
+	font: bold 24px/48px "Lato", Arial, sans-serif;
+	display:block;
+	height:48px;
+	background-color:#69b9d8;
+	color:#FFF;
+	text-align:center;
+}
+.programItem:target {
+	max-height: 1920px;
+	padding: 18px 0;
+	border-top:#b7b6bb 1px solid;
+	border-bottom:#b7b6bb 1px solid;
+}
+#events tr:nth-child(n+3):nth-child(-n+8){
+	
+}
+#events tr:nth-child(1) {
+	background-color:#639381;
+	font: bold 30px/36px "Lato", Arial, sans-serif;
+	color:#FFF;
+}
+#events tr:nth-child(2) {
+	background-color:#939FAC;
+	font: normal 22px/32px "Lato", Arial, sans-serif;
+	color:#FFF;
+}
+#events tr:nth-child(3) {
+	font: bold 18px "Lato", Arial, sans-serif;
+	color:#ed913e;
+	background-color:#f1f1f1;;
+}
+#events tr:nth-child(4) {
+	font: bold 18px "Lato", Arial, sans-serif;
+	color:#49545F;
+	background-color:#f9f9f9;
+}
+#events tr:nth-child(5) {
+	font: bold 18px "Lato", Arial, sans-serif;
+	color:#49545F;
+	background-color:#f9f9f9;
+}
+#events tr:nth-child(6) {
+	font: bold 18px "Lato", Arial, sans-serif;
+	color:#49545F;
+	background-color:#f9f9f9;
+}
+#events tr:nth-child(7) {
+	font: bold 18px "Lato", Arial, sans-serif;
+	color:#49545F;
+	background-color:#f9f9f9;
+}
+#events tr:nth-child(8) {
+	font: bold 18px "Lato", Arial, sans-serif;
+	color:#49545F;
+	background-color:#f9f9f9;
+}
+#events tr:nth-child(8) td:nth-child(n+4) {
+	font: bold 18px "Lato", Arial, sans-serif;
+	color:#ed913e;
+	background-color:#f1f1f1;
+}
+
+
+#events tr td span{
+	background: #f9f9f9;
+	border: 0px solid #f1f1f1;
+	color: #49545F;
+	font: normal 14px/24px "Lato", Arial, sans-serif;
+	width: 0;
+	position: absolute;
+	text-align: left;
+	margin: 0 auto;
+	padding: 6px;
+	display:block;
+	max-height: 0px;
+	overflow:hidden;	
+	transition: all 0.4s ease 0s;
+	-webkit-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-ms-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	
+	 
+}
+#events tr td:hover span{
+	border: 8px solid #f1f1f1;
+	max-height: 276px;
+	width: 276px;
+}
+
+#events tr td em, #events tr td em a {
+	font: normal 14px "Lato", Arial, sans-serif;
+	color: #49545F;
+}
+#events tr td em a:active {
+	cursor: pointer;
+	text-decoration:underline;
+}
+#events tr td em a:hover {
+	cursor: pointer;
+	text-decoration:underline;
+}
+
+.newsroom h2 a{
+	text-decoration:none;
+	color: white;
+	display:block;
+}
+
+
+.pledgeOrange td,.pledgeBlue td,.pledgeGreen td {
+	text-align:center;
+	font: normal 22px/32px "Lato", Arial, sans-serif;
+	color:#FFF;
+}
+.pledgeOrange td a,.pledgeBlue td a,.pledgeGreen td a {
+	display:block;
+	text-decoration:none;
+}
+
+
+.pledgeOrange h2 {
+	background-color:#ED913E;
+}
+.pledgeOrange td a:link, .pledgeOrange td a:visited, .pledgeOrange td a:active{
+	background-color:#ED913E;
+}
+.pledgeOrange td a:hover{
+	background-color:#639381;
+}
+
+
+.pledgeBlue h2 {
+	background-color:#6DC8F0;
+}
+.pledgeBlue td a:link, .pledgeBlue td a:visited, .pledgeBlue td a:active{
+	background-color:#6DC8F0;
+}
+.pledgeBlue td a:hover{
+	background-color:#A2ADB8;
+}
+
+
+.pledgeGreen h2 {
+	background-color:#639381;
+}
+/* END BODY */
+
+/* FOOTER */
+#footer {
+	background-color: #a2adb8;
+	height: 200px;
+	width: 100%;
+	float: left;
+}
+#footerContent {
+	margin: 0 auto 8px auto;
+	height: 162px;
+	width: 960px; 
+}
+#mission {
+	width: 480px;
+	height:162px;
+	float:left;
+	padding: 16px 32px 0 16px;
+	box-sizing:border-box;
+}
+#mission > p {
+	font: normal 16px/20px "Lato", Arial, sans-serif;
+	color:#FFF;
+}
+#contact {
+	width: 480px;
+	height:144px;
+	float:left;
+	padding: 16px 16px 0 16px;
+	box-sizing:border-box;
+
+}
+#social {
+	height: 128px;
+	width: 32px;
+	float: left;
+}
+#social a {
+	height: 32px;
+	width: 32px;
+	display: block;
+}
+#fb, #tw, #igm {
+	height: 32px;
+	width: 32px;
+	float: left;
+	margin-bottom: 16px;
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-ms-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	transition: all .2s ease-in;	
+}
+#fb {
+	background-image:url(../images/fb_inactive.png);	
+}
+#fb:hover {
+	background-image:url(../images/fb_active.png);	
+}
+#tw {
+	background-image:url(../images/tw_inactive.png);	
+}
+#tw:hover {
+	background-image:url(../images/tw_active.png);	
+}
+#igm {
+	background-image:url(../images/igm_inactive.png);	
+}
+#igm:hover {
+	background-image:url(../images/igm_active.png);	
+}
+#formArea {
+	height: 128px;
+	width: 400px;
+	float:left;
+	margin:0;
+	padding: 0 0 0 16px;
+}
+#formArea p {
+	font: normal 20px/14px "Lato", Arial, sans-serif;
+	color:#FFF;
+	padding: 0 0 14px 0;
+}
+#formArea form {
+	height: 96px;
+	width: 400px;
+	margin:0;
+	padding: 0;
+}
+input[type=text].form {
+	width: 190px;
+	height: 18px;
+	padding: 0 4px 2px 4px;
+	box-sizing:border-box;
+	border: 0px;
+	font: normal 14px/16px "Lato", Arial, sans-serif;
+}
+input[name=formName] {
+	margin-right:16px;
+	margin-bottom:16px;
+}
+input[name=formEmail] {
+	margin:0;	
+}
+input[type=text]:focus {
+	background-color:#F4F4F4;
+}
+textarea {
+	width: 304px;
+	height: 64px;
+	margin:0;
+	resize: none;
+	padding: 6px;
+	box-sizing:border-box;
+	border: 0px;
+	font: normal 14px/16px "Lato", Arial, sans-serif;
+}
+textarea:focus {
+	background-color:#F4F4F4;
+}
+input[type=submit].form {
+	float: right;
+	width: 80px;
+	height: 64px;
+	margin:0;
+	padding: 0;
+	border: 0px;
+	background-color: white;
+	color: #a2adb8;
+	font: normal 14px "Lato", Arial, sans-serif;
+	cursor: pointer;
+}
+input[type=submit].form:hover {
+	background-color:#F4F4F4;
+}
+
+input[type=submit].form:active {
+	background-color:#639381;
+	color: white;
+}
+.bstripe {
+	width:100%;
+	height:10px;
+}
+.orange {
+	background-color:#ed913e;
+}
+
+.blue {
+	background-color:#6dc8f0;
+}
+.green {
+	background-color:#639381;
+}
+/* END FOOTER */
+@media only screen and (max-width: 800px) {
+#headerContent {
+	height: 247px;
+}
+#headerFuncs {
+	float:left;
+}
+#idlogo {
+	height: 116px;
+}
+#idlogo img {
+	width: 206px;
+	height: 116px;
+
+}
+}

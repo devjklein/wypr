@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WYPR | Your NPR News Station</title>
+<link href="css/searchbox.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link href="css/mstyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="header">
+  <div id="logo"><a href="index.php"><img src="m-images/881_logo_full_mini.png" width="1z33" height="99" alt=""/></a></div>
+  <div id="hamburger"><a href="#menu"></a></div>
+</div>
+
+<div id="menu">
+	<ul>
+		<li><a href="m.index.php">Home</a></li>
+		<li><a href="m.programs.php">Programs</a></li>
+		<li><a href="m.newsroom.php" class="current">Newsroom</a></li>
+		<li><a href="m.events.php">Events</a></li>
+		<li><a href="m.support.php">Support</a></li>
+		<li><a href="m.about.php">About</a></li>
+		<li><a href="#">Close Menu</a></li>
+	</ul>
+</div>
+
+
+<div id="nav">
+	<div id="listenlive"><a href="#"><img src="m-images/playbutton_mini.png" width="26" height="26" /> Listen Live</a></div>
+	<div id="donate"><a href="m.support.php">Donate</a></div>
+</div>
+
+<div id="bodyContent">
+	<div id="wrapper">
+    	<h1>Newsroom</h1>
+        		<div class="newsroom item news">
+					<h3>Vestibulum eleifend imperdiet mi, ac tempor metus convallis at.</h3><br>
+					<div><img src="images/mff.jpg" width="87" alt="School Bus"></div>
+					<p>Aliquam semper erat nec massa sollicitudin, sit amet tincidunt urna sodales. Maecenas viverra sit amet nunc tempus scelerisque. Mauris dictum pharetra erat sed facilisis. Sed venenatis suscipit tincidunt. Sed rhoncus, dui id porttitor tincidunt, est sem ultrices nibh, sed varius tellus augue consequat odio. Cras purus justo, fringilla a ex at, aliquet tempor mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+				</div>
+                
+                <div class="newsroom item news">
+					<h3>Mauris fermentum leo vel pharetra volutpat!</h3><br>
+					<div><img src="images/washington.jpg" width="87" alt="School Bus"></div>
+					<p>Sed molestie tellus et mi accumsan, et ullamcorper tellus consequat. Phasellus feugiat ut massa at maximus. Curabitur ut aliquet felis. Nulla luctus eu felis ut gravida. Curabitur vel hendrerit mauris. Morbi eget arcu imperdiet, aliquam magna sit amet, fermentum sapien. Quisque faucibus sed elit ut cursus. Nunc eget sapien sit amet eros lobortis convallis ut et eros. Praesent posuere id velit nec mollis. </p>
+				</div>
+				
+				<div class="newsroom item news">
+					<h3>Donec viverra vulputate egestas.</h3><br>
+					<div><img src="images/ummc.jpg" width="87" alt="Roady"></div>
+					<p>Sed molestie tellus et mi accumsan, et ullamcorper tellus consequat. Phasellus feugiat ut massa at maximus. Curabitur ut aliquet felis. Nulla luctus eu felis ut gravida. Curabitur vel hendrerit mauris. Morbi eget arcu imperdiet, aliquam magna sit amet, fermentum sapien. Nulla purus metus, maximus at ante ut, feugiat placerat lorem. Quisque sed malesuada mauris. Morbi lacinia nunc non ligula porttitor, at tempor ipsum dignissim. Pellentesque sodales consectetur massa in venenatis. Curabitur elit tortor, gravida sed magna posuere.</p>
+				</div>
+                
+                <div class="newsroom item news last">
+					<h3>Nam convallis finibus quam, ut maximus urna semper ut.</h3><br>
+					<div><img src="images/glare.jpg" width="87" alt="School Bus"></div>
+					<p> Cras purus justo, fringilla a ex at, aliquet tempor mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum erat leo, eu volutpat lacus consequat et. In placerat ligula vel mi molestie scelerisque. Proin eu consequat augue. Sed nec aliquam ante, vitae tempus libero. Aliquam varius sem sit amet lorem pretium, nec lobortis est cursus. Nunc non risus leo. Suspendisse dapibus sapien non augue accumsan condimentum.</p>
+                </div>
+	</div>
+</div>
+
+<div id="footer">
+	<div id="footerContent">
+		<div id="contact">
+				<p>Contact us:</p>
+				<?php
+				/*if($_POST['formSubmit'] == "Submit")
+				{
+					if(!empty($_POST['formEmail']))
+					{
+						if (!filter_var($_POST['formEmail'], FILTER_VALIDATE_EMAIL) == false)
+						{
+							echo("is a valid email address");
+						} else
+						{
+							echo '<script type="text/javascript">';
+							echo 'alert("' . $_POST['formEmail'] . ' is an invalid email.")';
+							echo '</script>';
+						}
+					}
+				}*/
+				if(!empty($errorMessage)) 
+				{
+					echo '<script type="text/javascript">';
+					echo 'alert("There was an error with your form: \n ' . $errorMessage1 . ' \n ' . $errorMessage2 . ' \n ' . $errorMessage3 . '")';
+					echo '</script>';
+				}
+				?>
+				<form action="m.index.php" method="post">
+				<input name="formName" placeholder="Name" type="text" class="form" value="<?=$varName;?>" />
+				<input name="formEmail" placeholder="Email@example.com" type="text" class="form" value="<?=$varEmail;?>" />
+				<textarea name="formComm" placeholder="Comments"><?=$varComm;?></textarea>
+				<input name="formSubmit" type="submit" value="Submit" class="form" />
+				</form>
+			</div>
+			
+			<div id="social">
+				<div id="fb"><a target="_blank" href="https://www.facebook.com/WYPR881Baltimore"></a></div>
+				<div id="tw"><a target="_blank" href="https://twitter.com/WYPR881FM"></a></div>
+				<div id="igm"><a target="_blank" href="https://www.instagram.com/explore/locations/27732854/"></a></div>
+			</div>
+			
+			
+		<div id="mission">
+				<p>Serving the metropolitan Baltimore area and the state of Maryland, the mission of Your Public Radio is to broadcast programs of intellectual integrity and cultural merit which enrich the minds and spirits of our listeners and ultimately strengthen the communities we serve.<br /><br />© 2016 WYPR</p>
+		</div>
+	</div>
+	<div class="bstripe orange"></div>
+	<div class="bstripe blue"></div>
+	<div class="bstripe green"></div>
+</div>
+	
+
+</body>
+</html>

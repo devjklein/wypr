@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WYPR | Your NPR News Station</title>
+<link href="css/searchbox.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link href="css/mstyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="header">
+  <div id="logo"><a href="index.php"><img src="m-images/881_logo_full_mini.png" width="1z33" height="99" alt=""/></a></div>
+  <div id="hamburger"><a href="#menu"></a></div>
+</div>
+
+<div id="menu">
+	<ul>
+		<li><a href="m.index.php" class="current">Home</a></li>
+		<li><a href="m.programs.php">Programs</a></li>
+		<li><a href="m.newsroom.php">Newsroom</a></li>
+		<li><a href="m.events.php">Events</a></li>
+		<li><a href="m.support.php">Support</a></li>
+		<li><a href="m.about.php">About</a></li>
+		<li><a href="#">Close Menu</a></li>
+	</ul>
+</div>
+
+
+<div id="nav">
+	<div id="listenlive"><a href="#"><img src="m-images/playbutton_mini.png" width="26" height="26" /> Listen Live</a></div>
+	<div id="donate"><a href="m.support.php">Donate</a></div>
+</div>
+
+<div id="bodyContent">
+	<div class="newsHeader"><h2>Featured Programs</h2></div>
+	<div class="item program">
+			<div><img src="m-images/mmorning.jpg" width="115"alt="Maryland Morning" /></div>
+			<h3>Maryland Morning</h3>
+			<p>On Maryland Morning we talk to the people who matter most to Marylanders:  people making news, people making art . . .</p>
+		</div>
+	<div class="item program last">
+			<div><img src="m-images/midday.jpg" width="115" alt="Maryland Midday" /></div>
+			<h3>Midday</h3>
+			<p>Midday is WYPR's daily public affairs program heard from noon-1pm, Monday-Friday.</p>
+		</div>
+		
+	<div class="newsHeader"><h2>On the Watch</h2></div>
+		<div class="item watch last">
+			<div><img src="m-images/chart.jpg" width="289" height="124" alt="Stats" /></div>
+			<h3>Aliquam tristique tortor vel tellus</h3>
+			<p>Nam cursus volutpat velit nec fermentum. Etiam magna nunc, lobortis ac porttitor eleifend, imperdiet sit amet felis. Duis efficitur odio nunc, eget placerat ex . . .</p>
+		</div>
+		
+	<div class="newsHeader"><h2>News</h2></div>
+		<div class="item news">
+			<h3>Vestibulum eleifend imperdiet</h3>
+			<div><img src="m-images/bus.jpg" alt="School Bus" /></div>
+			<p>Aliquam semper erat nec massa sollicitudin, sit amet tincidunt urna sodales. Maecenas viverra sit amet nunc tempus scelerisque. Mauris dictum pharetra erat sed facilisis.</p>
+		</div>
+		
+		<div class="item news last">
+			<h3>Donec viverra vulputate egestas.</h3>
+			<div><img src="images/art.jpg" alt="Artsy" width="87" /></div>
+			<p>Nulla purus metus, maximus at ante ut, feugiat placerat lorem. Quisque sed malesuada mauris. Morbi lacinia nunc non ligula porttitor, at tempor ipsum dignissim. Pellentesque sodales consectetur massa in venenatis. Curabitur elit tortor, gravida sed magna posuere.</p>
+		</div>
+			
+	<div class="newsHeader"><h2>NPR News</h2></div>
+		<div class="item">
+			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+			<p>Vivamus fermentum tortor ex, at rutrum nisl malesuada at. Nulla facilisi. Quisque maximus leo vel mauris lobortis dignissim. Nunc eget mattis arcu, et scelerisque augue.</p>
+		</div>
+		<div class="item last">
+			<h3>Proin vestibulum enim nibh, ac facilisis neque tempus nec.</h3>
+			<p>Etiam viverra eleifend scelerisque. Mauris laoreet est at odio fermentum egestas at ut nulla. Praesent sollicitudin gravida nibh, eu laoreet ante feugiat vel.</p>
+		</div>
+</div>
+
+<div id="footer">
+	<div id="footerContent">
+		<div id="contact">
+				<p>Contact us:</p>
+				<?php
+				/*if($_POST['formSubmit'] == "Submit")
+				{
+					if(!empty($_POST['formEmail']))
+					{
+						if (!filter_var($_POST['formEmail'], FILTER_VALIDATE_EMAIL) == false)
+						{
+							echo("is a valid email address");
+						} else
+						{
+							echo '<script type="text/javascript">';
+							echo 'alert("' . $_POST['formEmail'] . ' is an invalid email.")';
+							echo '</script>';
+						}
+					}
+				}*/
+				if(!empty($errorMessage)) 
+				{
+					echo '<script type="text/javascript">';
+					echo 'alert("There was an error with your form: \n ' . $errorMessage1 . ' \n ' . $errorMessage2 . ' \n ' . $errorMessage3 . '")';
+					echo '</script>';
+				}
+				?>
+				<form action="m.index.php" method="post">
+				<input name="formName" placeholder="Name" type="text" class="form" value="<?=$varName;?>" />
+				<input name="formEmail" placeholder="Email@example.com" type="text" class="form" value="<?=$varEmail;?>" />
+				<textarea name="formComm" placeholder="Comments"><?=$varComm;?></textarea>
+				<input name="formSubmit" type="submit" value="Submit" class="form" />
+				</form>
+			</div>
+			
+			<div id="social">
+				<div id="fb"><a target="_blank" href="https://www.facebook.com/WYPR881Baltimore"></a></div>
+				<div id="tw"><a target="_blank" href="https://twitter.com/WYPR881FM"></a></div>
+				<div id="igm"><a target="_blank" href="https://www.instagram.com/explore/locations/27732854/"></a></div>
+			</div>
+			
+			
+		<div id="mission">
+				<p>Serving the metropolitan Baltimore area and the state of Maryland, the mission of Your Public Radio is to broadcast programs of intellectual integrity and cultural merit which enrich the minds and spirits of our listeners and ultimately strengthen the communities we serve.<br /><br />© 2016 WYPR</p>
+		</div>
+	</div>
+	<div class="bstripe orange"></div>
+	<div class="bstripe blue"></div>
+	<div class="bstripe green"></div>
+</div>
+	
+
+</body>
+</html>
